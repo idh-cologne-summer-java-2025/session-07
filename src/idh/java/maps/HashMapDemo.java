@@ -2,6 +2,8 @@ package idh.java.maps;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 /**
  * Demonstriert den Einsatz einer HashMap für ein Telefonbuch
@@ -30,11 +32,11 @@ public class HashMapDemo {
         
         telefonbuch.remove("Clara");
         
-        
         // Noch eine Anna hinzufügen, mit anderer Nummer
-     
+        
         
         // Alle Einträge ausgeben
+        
         
 	}
 }
