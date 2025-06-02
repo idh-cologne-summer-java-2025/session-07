@@ -24,15 +24,27 @@ public class CountDemo {
 	}
 
 	private static void countDownIterative(int start) {
-		
+		System.out.println("Count down to " + start);
+		for(; start>=0; start--) {
+			System.out.println(start);
+		}
+		System.out.println();
 	}
 
 	private static void countDownRecursive(int start) {
-		
+		System.out.println(start);
+		if(start==0) {
+			return;
+		}
+		countDownRecursive(start-1);
 	}
 
 	private static void countUpRecursive(int end) {
-		
+		if(end==0) {
+			return;
+		}
+		countUpRecursive(end-1);
+		System.out.println(end);
 	}
 
 }

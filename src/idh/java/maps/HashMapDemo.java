@@ -23,21 +23,25 @@ public class HashMapDemo {
         // Telefonnummer von Anna abrufen
 
         System.out.println(telefonbuch.get("Anna"));
-        
+        System.out.println();
         // Prüfen, ob Bernd vorhanden ist
         
         System.out.println(telefonbuch.containsKey("Bernd"));
-
+        System.out.println();
         // Clara entfernen
         
         telefonbuch.remove("Clara");
         
         // Noch eine Anna hinzufügen, mit anderer Nummer
-        
+        String inMap = telefonbuch.put("Anna", "0123-NEUENUMMER");
+        System.out.println("War in Map: " + inMap);
         
         // Alle Einträge ausgeben
-        
-        
+        Set<String> keySet = telefonbuch.keySet();
+        for (String string : keySet) {
+			System.out.println(string + ": " + telefonbuch.get(string));
+		}
+        System.out.println(telefonbuch);
 	}
 }
 

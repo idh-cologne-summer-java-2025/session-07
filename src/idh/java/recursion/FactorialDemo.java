@@ -11,24 +11,31 @@ public class FactorialDemo {
         if (number < 0) {
             throw new IllegalArgumentException("Fakultät ist für negative Zahlen nicht definiert.");
         }
-        
-        // TODO: Implement!
-        return 0;
+        if (number == 0) {
+        	return 1;
+        }
+        int erg = 1;
+        for(int i=number; i>0; i--) {
+        	erg = erg*i;
+        }
+        return erg;
     }
 	
     public static int calculateFactorialRecursive(int number) {
         if (number < 0) {
             throw new IllegalArgumentException("Fakultät ist für negative Zahlen nicht definiert.");
         }
-        
-        // TODO: Implement!
-        return 0;
+        if(number == 0) {
+        	return 1;
+        }
+        number = number * calculateFactorialRecursive(number-1);
+        return number;
     }
 
     public static void main(String[] args) {
         
         try {
-            int number = 5;
+            int number = 9;
         	System.out.println(calculateFactorialRecursive(number));
         	System.out.println(calculateFactorialIterative(number));
         } 
